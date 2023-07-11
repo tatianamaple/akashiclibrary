@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Books{% endblock %}
+{% block content %}
+
+<h1 class=brown_text style="text-align:center">Books!</h1>
+<p class="brown-line">
+</p>
+<div class=brown_text>
+    {% for book in books %}
+    <image class="scaling_image" src="{{ url_for('static', filename='images/' + book.image) }}">
+    <h2>{{ book.title }}</h2></br>
+    <ul class="bookinfo">
+        <li>Author: {{ book.authors_name }}</li></br>
+        <li>Genre: {{ book.genre }}</li></br>
+        <li>Publish year: {{ book.publish_year }}</li></br>
+        <li>Publisher: {{ book.publisher }}</li></br>
+        <li>Page count: {{ book.page_count }}</li></br>
+        <button class="button-56">Download</button>
+        <script src="index.js"></script>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}

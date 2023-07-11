@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}TheAkashicLibrary{% endblock %}
+{% block content %}
+<p style="display:inline-block;">
+    <h1 style="color: brown;" class="home_title"><image src="{{ url_for('static', filename='images/akashiclibrarybook.png') }}">
+    The Akashic Library</h1>
+</p>
+<p class="brown-line">
+</p>
+<p class="links-margin" style="font-size: 20px; color:#1F9AFE;">
+<a id="books" href="/books">Books</a>
+</p>
+
+<p class="white-box">
+    Welcome to the Akashic Library! Check out our selection of books above. Happy reading!
+</p>
+{% endblock %}

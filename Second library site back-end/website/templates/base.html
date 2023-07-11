@@ -1,0 +1,173 @@
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+<style>
+	p {
+  		font-size: 20px;
+	}
+	h1 {
+		font-family:IBM Plex Mono;
+	}
+	body {
+		background-color: #edcdb7;
+	}
+
+	.home_title {
+		margin-left: 440px;
+	}
+
+	.links-margin {
+		border-radius: 25px;
+		background-color: #c2634e;
+		padding: 10px 200px 10px 200px;
+		margin-left: 200px;
+		margin-right: 200px;
+		text-align: center;
+		word-spacing: 70px
+	}
+	.brown-line {
+		background-color: #c2634e;
+		padding: 5px 200px 0px 200px
+	}
+	a:link {
+  		color: white;
+	}
+
+	a:visited {
+  		color: pink;
+	}
+
+	a:hover {
+  		color: #b3243e;
+	}
+
+	.white-box {
+		border-radius: 25px;
+		background-color: white;
+		padding: 10px 200px 10px 200px;
+		margin-left: 300px;
+		margin-right: 300px;
+		text-align: center;
+    }
+
+	.topnav {
+		background-color: #c2634e;
+		overflow: hidden;
+	}
+
+	.topnav a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	.topnav a:hover {
+		background-color: #fd7492;
+		color: #b3243e;
+	}
+
+	.scaling_image {
+		height: auto; 
+		width: auto; 
+		max-width: 300px; 
+		max-height: 300px;
+		float: left;
+		padding: 0px 30px 10px 10px;
+	}
+
+	.brown_text {
+		color: brown;
+	}
+
+	.bookinfo {
+		padding: 0px 0px 150px 0px;
+	}
+
+	.button-56 {
+  		align-items: center;
+  		background-color: #fab8c1;
+  		border: 2px solid brown;
+  		border-radius: 8px;
+  		box-sizing: border-box;
+  		color: brown;
+  		cursor: pointer;
+  		display: flex;
+  		font-family: Inter,sans-serif;
+  		font-size: 16px;
+  		height: 48px;
+  		justify-content: center;
+  		line-height: 24px;
+  		max-width: 100%;
+  		padding: 0 25px;
+  		position: relative;
+  		text-align: center;
+  		text-decoration: none;
+  		user-select: none;
+  		-webkit-user-select: none;
+  		touch-action: manipulation;
+	}
+
+	.button-56:after {
+		background-color: brown;
+		border-radius: 8px;
+		content: "";
+		display: block;
+		height: 48px;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		top: -2px;
+		transform: translate(8px, 8px);
+		transition: transform .2s ease-out;
+		z-index: -1;
+	}
+
+	.button-56:hover:after {
+		transform: translate(0, 0);
+	}
+
+	.button-56:active {
+		background-color: #fab8c1;
+		outline: 0;
+	}
+
+	.button-56:hover {
+		outline: 0;
+	}
+
+	@media (min-width: 768px) {
+	.button-56 {
+		padding: 0 40px;
+	}
+	}
+</style>
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta content="text/html; charset="utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{% block title %}TheAkashicLibrary.com{% endblock %}</title>
+	</head>
+	<body>
+
+		<div class="topnav">
+			<a id="home" href="/">Home</a>
+			<a id="logout" href="/logout">Logout</a>
+			<a id="login" href="/login">Login</a>
+			<a id="signUp" href="/sign-up">Sign Up</a>
+			<a id="userPage" href="/user-page">User Page</a>
+		</div>
+
+		<div>
+			{% block content %}
+			{% endblock %}
+		</div>
+
+
+		
+	</body>
+</html>
