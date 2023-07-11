@@ -1,9 +1,5 @@
 from . import db
 from flask_login import UserMixin
-from sqlalchemy.sql import func
-from sqlalchemy import insert, create_engine, ForeignKey, Column, String, Integer, CHAR
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 cart = db.Table('cart',
                 db.Column('patron_account_id', db.Integer, db.ForeignKey('patron_account.id')),
